@@ -3,11 +3,59 @@
 \title{Apuntes de programaci\'on lineal}
 \author{Yadhira Villeda Trejo}
 \usepackage[utf8]{inputenc}
-
+\usepackage{amsmath}
 
 
 \begin{document}
 \maketitle
+\section{Forma Éstandar}
 La forma estándar de un problema de programacón lineal es:
-Dada una matriz $A$ y vectores $c,d$, maximizar $c^Tx$ sujeto a  $Ax\leq b$
+Dada una matriz $A$ y vectores $c.b$, maximizar $c^Tx$ sujeto a:\\  
+$Ax\leq b$ \\
+$x\leq 0$
+
+\subsection{Ejemplos}
+\label{sec:ejemplos}
+
+Maximizar $x+y$ \\
+sujeto a:\\
+$y-x\leq 1$ \\
+$x+6y\leq 15$ \\
+$4x-y\leq 10$ \\
+la forma estandar es:\\
+
+$c=(1,1)$
+\begin{equation}
+  \label{eq:1}
+  A=\begin{pmatrix}
+    1&-1\\
+    1&6 \\
+    4&-1
+  \end{pmatrix},
+  c= \begin{pmatrix}
+    1\\
+    1
+  \end{pmatrix}, b=
+  \begin{pmatrix}
+    1\\
+    15\\
+    10
+  \end{pmatrix}
+
+
+\end{equation}
+\section{Forma Simplex}
+La forma simplex de un probema de programacion lineal es: sea la
+matriz $A$ y los vectores $c,b$ maximizar $c^Tx$
+sujeto a:\\
+$Ax=b$ \\
+$x\leq 0$
+
+
+
+
+
+
+
+
 \end{document}
