@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+\title{MÉTODO SIMPLEX}
+\author{Yadhira Villeda}
+
+\begin{document}
+\maketitle
+\section{Introducción}
+\label{sec:introduccion}
+
+El metodo simplex es un algoritmo para resolver problemas de
+programacion lineal.Fue inventado por George Datzig en el año 1947.
+
+\section{Ejemplo}
+\label{sec:ejemplo}
+Ilustraremos la aplicación del método simplex con  un ejemplo:
+
+\begin{equation*}
+  \begin{aligned}
+    \text{Maximizar} \quad &2x+2y\\
+    \text{sujeto a}\quad &
+    \begin{aligned}
+      2x+y &\leq 4\\
+      x+2y &\leq 5 \\
+       x,y &\geq 0
+    \end{aligned}
+  \end{aligned}
+\end{equation*}
+Se convierte a el siguiente problema, agregando las variables de
+holgura:\\
+
+\begin{equation*}
+  \begin{aligned}
+    \text{Maximizar} \quad &2x_1+2x_2\\
+    \text{sujeto a}\quad &
+    \begin{aligned}
+      2x_1+x_2+x_3 = 4\\
+      x_1+2x_2+x_4= 5 \\
+       x_1,x_2,x_4,x_3 &\geq 0
+    \end{aligned}
+  \end{aligned}
+\end{equation*}
+A continuación obtenemos un\emph{Tablero Simplex} despejando las variables
+de holgura quedando:\\
+
+\begin{equation*}
+   \begin{aligned}
+     x_3 &=-2x_1-x_2 +4\\
+     x_4 &=-x_1-2x_2+ 5 \\
+     \hline
+     z &=2x_1+2x_2
+    \end{aligned}
+\end{equation*}
+
+\end{document}
+
